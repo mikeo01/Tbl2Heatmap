@@ -57,7 +57,7 @@ var Heatmap;
     function generateHeatmap(h) {
         try {
             var hsl = h.getShade();
-            var cells = Array.prototype.slice.call(h.getTable().querySelectorAll('.heatmap tr .heatmap-cell'));
+            var cells = Array.prototype.slice.call(h.getTable().querySelectorAll('.heatmap .heatmap-row .heatmap-cell'));
             // For dynamic heatmap
             var heatmap = {};
             // Build up heatmap information
