@@ -6,7 +6,7 @@ Uses:
 ```javascript
   Heatmap.generateHeatmap({
       getShade: () => Heatmap.Colors.Red, // See tbl2heatmap.js/.ts for colour list or provided your own
-      getTable: () => document.getElementById('tabe')
+      getTable: () => document.getElementById('table')
   });
 ```
 
