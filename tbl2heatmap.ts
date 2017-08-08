@@ -1,7 +1,7 @@
 /**
-* PDFMake Facade.
-* @link https://github.com/mikeo01/pdfmake_facade The PDFMake_Facade GitHub project
-* @author Michael Long <support@mv-xfusion.co.uk>
+* Tbl2heatmap.
+* @link https://github.com/mikeo01/tbl2heatmap The tbl2heatmap GitHub project
+* @author Michael Long <>
 * @license http://opensource.org/licenses/MIT The MIT License (MIT)
 * @note This program is distributed in the hope that it will be useful - WITHOUT
 * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
