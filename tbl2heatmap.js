@@ -52,12 +52,14 @@ var Heatmap;
     Heatmap.Colors = Colors;
     /**
      * generateHeatmap builds a heatmap from tabular data
-     * @param h IHeatmap    Interface required for heatmap generation
+     * @param h         IHeatmap    Interface required for heatmap generation
+     * @param selector  String      DOM selector for heatmap
      */
-    function generateHeatmap(h) {
+    function generateHeatmap(h, selector) {
+        if (selector === void 0) { selector = '.heatmap-cell'; }
         try {
             var hsl = h.getShade();
-            var cells = Array.prototype.slice.call(h.getTable().querySelectorAll('.heatmap .heatmap-row .heatmap-cell'));
+            var cells = Array.prototype.slice.call(h.getTable().querySelectorAll('.heatmap .heatmap-row ' + selector));
             // For dynamic heatmap
             var heatmap = {};
             // Build up heatmap information
