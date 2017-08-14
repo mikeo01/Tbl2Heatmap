@@ -1,13 +1,3 @@
-/**
-* Tbl2heatmap.
-* @link https://github.com/mikeo01/tbl2heatmap The tbl2heatmap GitHub project
-* @author Michael Long <>
-* @license http://opensource.org/licenses/MIT The MIT License (MIT)
-* @note This program is distributed in the hope that it will be useful - WITHOUT
-* ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
-* FITNESS FOR A PARTICULAR PURPOSE.
-*/
-
 namespace Heatmap {
     // Default values
     const SATURATION: number = 80;
@@ -95,13 +85,14 @@ namespace Heatmap {
 
     /**
      * generateHeatmap builds a heatmap from tabular data
-     * @param h IHeatmap    Interface required for heatmap generation
+     * @param h         IHeatmap    Interface required for heatmap generation
+     * @param selector  String      DOM selector for heatmap
      */
-    export function generateHeatmap(h: IHeatmap): boolean {
+    export function generateHeatmap(h: IHeatmap, selector: string = '.heatmap-cell'): boolean {
         try {
             const hsl: HSL = h.getShade();
             const cells: any = Array.prototype.slice.call(
-                h.getTable().querySelectorAll('.heatmap .heatmap-row .heatmap-cell')
+                h.getTable().querySelectorAll('.heatmap .heatmap-row ' + selector)
             );
 
             // For dynamic heatmap
