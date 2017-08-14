@@ -7,7 +7,7 @@ Uses:
   Heatmap.generateHeatmap({
       getShade: () => Heatmap.Colors.Red, // See tbl2heatmap.js/.ts for colour list or provided your own
       getTable: () => document.getElementById('table')
-  });
+  }, '.heatmap-cell'); // Optional selectors for multiple heatmap creations within the same table
 ```
 
 ```html
